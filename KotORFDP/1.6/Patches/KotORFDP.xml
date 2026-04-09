@@ -1,0 +1,94 @@
+<Patch>
+  <!-- Duplicate faction fix blocks (5 confirmed offenders only). -->
+
+  <!-- Sith Empire -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_SithEmpire"]/layerWhitelist</xpath>
+    <value>
+      <layerWhitelist>
+        <li>Surface</li>
+      </layerWhitelist>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_SithEmpire"]/maxCountAtGameStart</xpath>
+    <value><maxCountAtGameStart>1</maxCountAtGameStart></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_SithEmpire"]/maxConfigurableAtWorldCreation</xpath>
+    <value><maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation></value>
+  </Operation>
+
+  <!-- Old Republic -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_OldRepublic"]/layerWhitelist</xpath>
+    <value>
+      <layerWhitelist>
+        <li>Surface</li>
+      </layerWhitelist>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_OldRepublic"]/maxCountAtGameStart</xpath>
+    <value><maxCountAtGameStart>1</maxCountAtGameStart></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_OldRepublic"]/maxConfigurableAtWorldCreation</xpath>
+    <value><maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation></value>
+  </Operation>
+
+  <!-- Corrupt Republic -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_CorruptRepublic"]/layerWhitelist</xpath>
+    <value>
+      <layerWhitelist>
+        <li>Surface</li>
+      </layerWhitelist>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_CorruptRepublic"]/maxCountAtGameStart</xpath>
+    <value><maxCountAtGameStart>1</maxCountAtGameStart></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_CorruptRepublic"]/maxConfigurableAtWorldCreation</xpath>
+    <value><maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation></value>
+  </Operation>
+
+  <!-- Czerka Corporation -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_Czerka"]/layerWhitelist</xpath>
+    <value>
+      <layerWhitelist>
+        <li>Surface</li>
+      </layerWhitelist>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_Czerka"]/maxCountAtGameStart</xpath>
+    <value><maxCountAtGameStart>1</maxCountAtGameStart></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_Czerka"]/maxConfigurableAtWorldCreation</xpath>
+    <value><maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation></value>
+  </Operation>
+
+  <!-- Mandalorian Neo-Crusaders -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_MandoNeoCrusaders"]/layerWhitelist</xpath>
+    <value>
+      <layerWhitelist>
+        <li>Surface</li>
+      </layerWhitelist>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_MandoNeoCrusaders"]/maxCountAtGameStart</xpath>
+    <value><maxCountAtGameStart>1</maxCountAtGameStart></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_MandoNeoCrusaders"]/maxConfigurableAtWorldCreation</xpath>
+    <value><maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation></value>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,36 @@
+<Patch>
+  <!--
+    Fail-safe droid trait generation fix:
+    1) Disable race-restricted trait lock on the droid base so HAR has a valid pool.
+    2) Force ABF trait generation off on known problematic droid races.
+  -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name="guy762_KotORDroidBase"]/alienRace/raceRestriction/onlyGetRaceRestrictedTraits</xpath>
+    <value><onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_T3series"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_GE3PD"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_GOTO"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_HKseries"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_HK50series"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="guy762_DroidRace_HK51series"]/modExtensions/li[@Class="ArtificialBeings.ABF_ArtificialPawnExtension"]/dronesCanHaveTraits</xpath>
+    <value><dronesCanHaveTraits>false</dronesCanHaveTraits></value>
+  </Operation>
+</Patch>

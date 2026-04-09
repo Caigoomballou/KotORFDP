@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>KotORFDP</name>
+  <packageId>Caiandguy.kotorfactions</packageId>
+  <author>Caigoomballou</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Fixes for duplicated KotOR factions; Ideology duplicate CompStyleable on KotOR apparel (XML + optional Harmony under Optional_KotORApparelIdeologyStyleLoadFix); plus bundled KotOR droid compat sources (Death Rattle / RimPsyche / optional Nice Health Tab) under KotORDroidscompats.</description>
+  <modDependencies>
+    <li>
+      <packageId>guy762.KotORFactions</packageId>
+      <displayName>Star Wars KotOR Factions</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3379096669</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>guy762.MM.KotORCore</li>
+    <li>guy762.KotORFactions</li>
+    <li>guy762.KotORDroids</li>
+    <li>Killathon.ArtificialBeings</li>
+    <li>Killathon.ArtificialBeings.SynCore</li>
+    <li>Troopersmith1.DeathRattle</li>
+    <li>Maux36.Rimpsyche</li>
+    <li>Andromeda.NiceHealthTab</li>
+  </loadAfter>
+</ModMetaData>

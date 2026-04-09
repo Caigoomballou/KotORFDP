@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    KotOR apparel ThingDefs include CompProperties_Styleable in XML. With Ideology DLC loaded,
+    the game also injects CompStyleable, so items get TWO CompStyleable comps. Both serialize
+    the same label (sourcePrecept) → duplicate nodes and load-ID errors.
+
+    When Ideology is active, remove the mod-added CompProperties_Styleable; Ideology supplies one.
+    No Ideology: leave KotOR's explicit comp so apparel still has a single style comp.
+  -->
+  <Operation Class="PatchOperationSequence" MayRequire="Ludeon.RimWorld.Ideology">
+    <operations>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_apparelbase"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_apparelmakeable"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_ApparelNoQualityMakeable"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_nocraftclothingbase"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_CraftableUtilityBeltBase"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_DroidUtilityCraftableBase"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[@Name="guy762_jetpackMakeable"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+      <li Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="guy762_Headband_bandana"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

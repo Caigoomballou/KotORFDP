@@ -1,0 +1,39 @@
+<Patch>
+  <!--
+    Reduce HK hero age generation retries and silence humanlike/non-humanlike faction mismatch
+    for Rogue Droid Collective during debug/manual pawn generation.
+  -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>guy762.KotORDroids</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- HK-47: avoid tight age window that can fail with selected backstory set. -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="KotORPlayableHero_HK47"]/minGenerationAge</xpath>
+          <value><minGenerationAge>40</minGenerationAge></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="KotORPlayableHero_HK47"]/maxGenerationAge</xpath>
+          <value><maxGenerationAge>120</maxGenerationAge></value>
+        </li>
+        <!-- T3 hero: same pattern, keep broad but sensible synthetic age range. -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="KotORPlayableHero_T3M4"]/minGenerationAge</xpath>
+          <value><minGenerationAge>20</minGenerationAge></value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="KotORPlayableHero_T3M4"]/maxGenerationAge</xpath>
+          <value><maxGenerationAge>120</maxGenerationAge></value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <!-- Keep this isolated so missing pawnkind defs can't block faction classification. -->
+    <xpath>/Defs/FactionDef[defName="guy762_KotORFaction_RogueDroids"]/humanlikeFaction</xpath>
+    <value><humanlikeFaction>true</humanlikeFaction></value>
+  </Operation>
+</Patch>
